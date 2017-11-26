@@ -1,15 +1,16 @@
-===========
 PVSimulator
 ===========
 
 PVSimulator generates a file with 1 day simulation which contains
 the following information:
+```
 <timestamp> <V> <PV> <V+PV>
+```
 
-"V" - Random value which simulates household electricity consumption. This value is generated
+* "V" - Random value which simulates household electricity consumption. This value is generated
  using random.randrange(1, 9000)
-"PV" - PV simulated value. The library pvlib is used for that. See https://github.com/pvlib/pvlib-python
-"V + PV" - the sum of the two values
+* "PV" - PV simulated value. The library pvlib is used for that. See https://github.com/pvlib/pvlib-python
+* "V + PV" - the sum of the two values
 
 There are two main components:
 1. Producer. Sends messages to a message broker (RabbitMQ) with random values. These values
@@ -36,12 +37,11 @@ created in .tox folder: py27, py36 anb pep8. You can run the project in the foll
 How to run the simulator without tox
 ====================================
 
+```
 usage: simulate    [-h] [--frequency fq] [--rabbit_host host]
-                   [--rabbit_port port] [--rabbit_vhost port]
-                   [--rabbit_username port] [--rabbit_password port]
+                   [--rabbit_port port] [--rabbit_vhost vhost]
+                   [--rabbit_username username] [--rabbit_password password]
                    start_date output
-
-PVSimulator for 1 day
 
 positional arguments:
   start_date            Start date for simulation in format "YYYY-mm-dd
@@ -60,4 +60,4 @@ optional arguments:
                         RabbitMQ username. Default is 'guest'
   --rabbit_password password
                         RabbitMQ password. Default is 'guest'
-
+```
