@@ -34,8 +34,8 @@ created in .tox folder: py27, py36 anb pep8. You can run the project in the foll
 1. Python 2.7: .tox/py27/bin/simulate <args>
 2. Python 3.6: .tox/py36/bin/simulate <args>
 
-How to run the simulator without tox
-====================================
+How to run the simulator
+========================
 
 ```
 usage: simulate    [-h] [--frequency fq] [--rabbit_host host]
